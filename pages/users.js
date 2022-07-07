@@ -6,18 +6,21 @@ const Users = ({users}) => {
 
     return (
         <MainContainer>
-            <h1>Список пользователей</h1>
-            <ul>
-                {
-                    users.map(user =>
-                        <li key={user.id}>
-                            <Link href={`/users/${user.id}`}>
-                                <a>{user.name}</a> you are the best!
-                            </Link>
-                        </li>
-                    )
-                }
-            </ul>
+            <div>
+                <h1>Список пользователей</h1>
+                <ul>
+                    {
+                        users.map(user =>
+                            <li key={user.id}>
+                                <Link href={`/users/${user.id}`}>
+                                    <a>{user.name}</a> you are the best!
+                                </Link>
+                            </li>
+                        )
+                    }
+                </ul>
+            </div>
+
         </MainContainer>
     );
 };
